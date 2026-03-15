@@ -14,7 +14,15 @@ public class ticketDAO {
         System.out.println("Ticket guardado: " + t.getCodigoTicket());
     }
     
-    
+        // READ - Buscar por ID
+         public ticket buscarPorId(String id) {
+        for (ticket t : tickets) {
+            if (t.getId().equals(id)) {
+                return t;
+            }
+        }
+        return null;
+    }
     
 
     
