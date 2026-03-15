@@ -22,4 +22,20 @@ public class Menu {
         opcion = Sc.nextInt();
         return (opcion);
     }
+         static int menuPersonas() {
+        Scanner Sc = new Scanner(System.in);
+        int opcionpasajero = 0;
+        System.out.println("\n--------------------------------------------------");
+        System.out.println("|     SISTEMAS DE PASAJEROS          |");
+        System.out.println("|------------------------------------------------|");
+        System.out.println("| 1.  Registrar de pasajeros                   |");
+        System.out.println("| 2. Listar Pasajeros                               |");
+        System.out.println("| 3. Buscar por cédula                            |");
+        System.out.println("| 4. salir                                                    |");
+        System.out.println("|------------------------------------------------|");
+        System.out.println(" ");
+        System.out.println("seleccione(1-4):");
+        opcionpasajero = Sc.nextInt();
+        return (opcionpasajero);
+    }
 }
