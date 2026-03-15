@@ -35,6 +35,10 @@ public class personsaServices {
          // Buscar persona
          public Persona buscarPersona(String id) {
          return personaDAO.buscarPorId(id);
+    }   
+        // Listar todas
+        public ArrayList<Persona> listarPersonas() {
+        return personaDAO.obtenerTodas();
     }
     
     
