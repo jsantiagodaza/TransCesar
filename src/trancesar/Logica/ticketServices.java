@@ -26,6 +26,14 @@ public class ticketServices {
         return prefijo + "-" + numero;
     }
          
+        // Registrar ticket
+        public String registrarTicket(String empresa, LocalDate fecha, LocalTime hora, 
+                            String idVehiculo, float precio, String tipoVehiculo) {
+        // Validaciones básicas
+        if (precio <= 0) {
+            return "Error: El precio debe ser mayor a cero";
+        }
+        
     
     
     
