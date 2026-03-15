@@ -40,6 +40,12 @@ public class personsaServices {
         public ArrayList<Persona> listarPersonas() {
         return personaDAO.obtenerTodas();
     }
+        
+        // Eliminar
+        public boolean eliminarPersona(String id) {
+        return personaDAO.eliminar(id);
+    }
+    
     
     
     
