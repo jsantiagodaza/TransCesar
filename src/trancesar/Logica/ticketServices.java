@@ -15,6 +15,20 @@ public class ticketServices {
     
     
     
+        // Generar código único para ticket
+        private String generarCodigoTicket(String tipoVehiculo) {
+        String prefijo = "BUS";
+        if (tipoVehiculo != null && tipoVehiculo.toLowerCase().contains("micro")) {
+            prefijo = "MBUS";
+        }
+        // Número aleatorio de 4 dígitos para precio
+        int numero = (int)(Math.random() * 9000) + 1000;
+        return prefijo + "-" + numero;
+    }
+         
+    
+    
+    
     
     
 }
