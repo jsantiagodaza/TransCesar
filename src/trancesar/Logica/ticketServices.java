@@ -58,6 +58,11 @@ public class ticketServices {
         public ArrayList<ticket> listarTickets() {
         return ticketDAO.obtenerTodos();
     }
+        
+        // Calcular precio con descuento (ejemplo)
+        public float calcularPrecioConDescuento(float precioOriginal, float porcentajeDescuento) {
+        return precioOriginal * (1 - porcentajeDescuento/100);
+    }
    
     
     
