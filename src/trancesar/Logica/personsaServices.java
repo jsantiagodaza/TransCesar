@@ -31,6 +31,11 @@ public class personsaServices {
         
         
     }
+        
+         // Buscar persona
+         public Persona buscarPersona(String id) {
+         return personaDAO.buscarPorId(id);
+    }
     
     
     
