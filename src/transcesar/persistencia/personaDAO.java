@@ -14,6 +14,15 @@ public class personaDAO {
         System.out.println("Persona guardada: " + p.getNombre());
          }
     
+        // READ - Buscar por ID
+        public Persona buscarPorId(String id) {
+        for (Persona p : personas) {
+            if (p.getId().equals(id)) {
+                return p;
+                 }
+             }
+        return null; // No encontrado
+       }
     
     
     
