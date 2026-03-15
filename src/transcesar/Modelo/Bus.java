@@ -8,26 +8,27 @@ package transcesar.Modelo;
  *
  * @author 2jcue
  */
-    public class MicroBus extends Vehiculo {
 
-    public MicroBus(String placa, String ruta) {
+    public class Bus extends Vehiculo {
+
+    public Bus(String placa, String ruta) {
         super(placa, ruta);
-        this.capacidadMaxima = 25;
-        this.tarifaBase = 10000;
+        this.capacidadMaxima = 45;
+        this.tarifaBase = 15000;
     }
 
-    public String getTipo() { return "MicroBus"; }
+    public String getTipo() { return "Bus"; }
 
     public void imprimirDetalle() {
-        System.out.println("========== MICROBUS ==========");
+        System.out.println("========== BUS ==========");
         System.out.println("Placa           : " + placa);
         System.out.println("Ruta            : " + ruta);
         System.out.println("Capacidad máx.  : " + capacidadMaxima);
         System.out.println("Pasajeros act.  : " + pasajerosActuales);
         System.out.println("Cupos disponib. : " + getCuposDisponibles());
         System.out.println("Tarifa base     : $" + String.format("%,.0f", tarifaBase));
-        System.out.println("Disponible      : " + (disponible ? "Si" : "No"));
-        System.out.println("==============================");
+        System.out.println("Disponible      : " + (disponible ? "Sí" : "No"));
+        System.out.println("=========================");
     }
 
     @Override
