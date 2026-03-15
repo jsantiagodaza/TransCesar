@@ -23,6 +23,16 @@ public class ticketDAO {
         }
         return null;
     }
+         
+        // READ - Buscar por código de ticket
+        public ticket buscarPorCodigo(String codigo) {
+        for (ticket t : tickets) {
+            if (t.getCodigoTicket().equals(codigo)) {
+                return t;
+            }
+        }
+        return null;
+    }
     
 
     
