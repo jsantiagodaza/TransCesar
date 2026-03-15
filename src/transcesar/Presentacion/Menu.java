@@ -54,4 +54,20 @@ public class Menu {
         opcionvehiculos = Sc.nextInt();
         return (opcionvehiculos);
     }
+         static int menuTickets() {
+        Scanner Sc = new Scanner(System.in);
+        int opcionTicket = 0;
+        System.out.println("\n--------------------------------------------------");
+        System.out.println("|                         TICKETS                       |");
+        System.out.println("|------------------------------------------------|");
+        System.out.println("| 1. Crear Ticket                                      |");
+        System.out.println("| 2. Listar Tickets                                    |");
+        System.out.println("| 3. Buscar por código                            |");
+        System.out.println("| 4. salir                                                    |");
+        System.out.println("|------------------------------------------------|");
+        System.out.println(" ");
+        System.out.println("seleccione(1-4):");
+        opcionTicket = Sc.nextInt();
+        return (opcionTicket);
+    }
 }
