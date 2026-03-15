@@ -23,6 +23,11 @@ public class personaDAO {
              }
         return null; // No encontrado
        }
+        
+        // READ - Obtener todas las listas
+        public ArrayList<Persona> obtenerTodas() {
+        return personas;
+        }
     
     
     
