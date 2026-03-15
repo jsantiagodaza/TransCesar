@@ -11,7 +11,7 @@ public class pasajero{
     private String telefono;
     private int edad;
     private String direccion;   
-    
+    private String idticket;
       
     
     
