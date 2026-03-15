@@ -39,6 +39,25 @@ public class ticketDAO {
         public ArrayList<ticket> obtenerTodos() {
         return tickets;
     }
+        
+        
+        
+        // UPDATE
+        public boolean actualizar(String id, ticket ticketActualizado) {
+        for (int i = 0; i < tickets.size(); i++) {
+            if (tickets.get(i).getId().equals(id)) {
+                tickets.set(i, ticketActualizado);
+                return true;
+            }
+        }
+        return false;
+    }
+    
+        // DELETE
+        public boolean eliminar(String id) {
+        return tickets.removeIf(t -> t.getId().equals(id));
+    }
+    
 
     
 }
