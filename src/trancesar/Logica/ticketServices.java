@@ -34,6 +34,16 @@ public class ticketServices {
             return "Error: El precio debe ser mayor a cero";
         }
         
+        // Generar ID único y código
+        String id = UUID.randomUUID().toString();
+        String codigoTicket = generarCodigoTicket(tipoVehiculo);
+        
+        // Crear y guardar
+        ticket nuevo = new ticket(id, empresa, codigoTicket, fecha, hora, idVehiculo, precio);
+        ticketDAO.guardar(nuevo);
+        
+        return "Ticket creado con éxito. Código: " + codigoTicket;
+    }
     
     
     
