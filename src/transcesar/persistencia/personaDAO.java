@@ -44,6 +44,12 @@ public class personaDAO {
         public boolean eliminar(String id) {
         return personas.removeIf(p -> p.getId().equals(id));
     }
+        
+        // Verificar si existe
+        public boolean existe(String id) {
+        return buscarPorId(id) != null;
+    }
+    
     
     
     
