@@ -49,6 +49,10 @@ public class ticketServices {
         public ticket buscarTicket(String id) {
         return ticketDAO.buscarPorId(id);
     }
+        
+        public ticket buscarPorCodigo(String codigo) {
+        return ticketDAO.buscarPorCodigo(codigo);
+    }
     
     
     
