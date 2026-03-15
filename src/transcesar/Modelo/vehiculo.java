@@ -75,16 +75,5 @@ public abstract class Vehiculo {
        return placa + ";" + ruta + ";" + pasajerosActuales + ";" + disponible;
    }
    
-      public void imprimirDetalle() {
-        System.out.println("┌─────────────────────────────────────┐");
-        System.out.println("  Tipo     : " + this.getClass().getSimpleName());
-        System.out.println("  Placa    : " + placa);
-        System.out.println("  Ruta     : " + ruta);
-        System.out.println("  Capacidad: " + capacidadMaxima);
-        System.out.println("  Cupos    : " + getCuposDisponibles());
-        System.out.println("  Tarifa   : $" + (int) getTarifaBase());
-        System.out.println("  Estado   : " + (disponible ? "Disponible" : "No disponible"));
-        System.out.println("└─────────────────────────────────────┘");
-    }
 }
 
