@@ -38,4 +38,20 @@ public class Menu {
         opcionpasajero = Sc.nextInt();
         return (opcionpasajero);
     }
+         static int menuVehiculos() {
+        Scanner Sc = new Scanner(System.in);
+        int opcionvehiculos = 0;
+        System.out.println("\n--------------------------------------------------");
+        System.out.println("|                     VEHICULOS                     |");
+        System.out.println("|------------------------------------------------|");
+        System.out.println("| 1.  Registrar de vehículos                    |");
+        System.out.println("| 2. Listar Vehículos                                |");
+        System.out.println("| 3. Buscar por placa                              |");
+        System.out.println("| 4. salir                                                    |");
+        System.out.println("|------------------------------------------------|");
+        System.out.println(" ");
+        System.out.println("seleccione(1-4):");
+        opcionvehiculos = Sc.nextInt();
+        return (opcionvehiculos);
+    }
 }
