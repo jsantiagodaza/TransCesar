@@ -1,9 +1,8 @@
 
 package transcesar.Persistencia;
 
-import java.util.ArrayList;
+
 import transcesar.Modelo.Persona;
-import Modelo.persona;
 import java.util.ArrayList;
 
 public class personaDAO {
@@ -58,4 +57,4 @@ public class personaDAO {
     
     
 }
-}
+
