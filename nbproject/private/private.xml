@@ -2,6 +2,19 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+<<<<<<< HEAD
         <group/>
+=======
+        <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/2jcue/OneDrive/Documentos/NetBeansProjects/TransCesar/TransCesar/src/transcesar/persistencia/personaDAO.java</file>
+=======
+            <file>file:/C:/Users/santi/OneDrive/Documents/NetBeansProjects/%20TransCesar/src/transcesar/Modelo/Persona.java</file>
+            <file>file:/C:/Users/santi/OneDrive/Documents/NetBeansProjects/%20TransCesar/src/transcesar/Main.java</file>
+            <file>file:/C:/Users/santi/OneDrive/Documents/NetBeansProjects/%20TransCesar/src/transcesar/Presentacion/Menu.java</file>
+            <file>file:/C:/Users/santi/OneDrive/Documents/NetBeansProjects/%20TransCesar/src/transcesar/Persistencia/ticketDAO.java</file>
+>>>>>>> ab3410816c965e17caa1bd33cf5a7fc7871dce44
+        </group>
+>>>>>>> 1ceba1668ddf71045ffb2a54484889f78096b053
     </open-files>
 </project-private>
