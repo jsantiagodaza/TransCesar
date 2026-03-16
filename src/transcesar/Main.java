@@ -42,11 +42,11 @@ public class Main {
         do {
 
             System.out.println("\n|          GESTIÓN DE PERSONAS         |");
-            System.out.println("| 1 --> Registrar                                          |");
-            System.out.println("| 2 --> Listar Todas las personas              |");
-            System.out.println("| 3 --> Buscar Persona por cedula            |");
-            System.out.println("| 4 --> Eliminar Nota                                   |");
-            System.out.println("| 0 --> Volver                                               |");
+            System.out.println("| 1 --> Registrar                        |");
+            System.out.println("| 2 --> Listar Todas las personas        |");
+            System.out.println("| 3 --> Buscar Persona por cedula        |");
+            System.out.println("| 4 --> Eliminar Nota                    |");
+            System.out.println("| 0 --> Volver                           |");
             System.out.print("| Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar buffer
@@ -61,11 +61,11 @@ public class Main {
         do {
 
             System.out.println("\n|          GESTIÓN DE VEHICULOS        |");
-            System.out.println("| 1 --> Registrar                                          |");
-            System.out.println("| 2 --> Listar Todas los Vehiculos             |");
-            System.out.println("| 3 --> Buscar Vehiculo por placa             |");
-            System.out.println("| 4 --> Eliminar Vehiculo                             |");
-            System.out.println("| 0 --> Volver                                               |");
+            System.out.println("| 1 --> Registrar                        |");
+            System.out.println("| 2 --> Listar Todas los Vehiculos       |");
+            System.out.println("| 3 --> Buscar Vehiculo por placa        |");
+            System.out.println("| 4 --> Eliminar Vehiculo                |");
+            System.out.println("| 0 --> Volver                           |");
             System.out.print("| Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar buffer
@@ -80,11 +80,11 @@ public class Main {
         do {
 
             System.out.println("\n|          GESTIÓN DE TICKETS              |");
-            System.out.println("| 1 --> Comprar ticket                                 |");
-            System.out.println("| 2 --> Listar Todas los tickets                   |");
-            System.out.println("| 3 --> Buscar ticket por ID                         |");
-            System.out.println("| 4 --> Eliminar Ticket                                 |");
-            System.out.println("| 0 --> Volver                                               |");
+            System.out.println("| 1 --> Comprar ticket                       |");
+            System.out.println("| 2 --> Listar Todas los tickets             |");
+            System.out.println("| 3 --> Buscar ticket por ID                 |");
+            System.out.println("| 4 --> Eliminar Ticket                      |");
+            System.out.println("| 0 --> Volver                               |");
             System.out.print("| Seleccione una opción: ");
             opcion = scanner.nextInt();
             scanner.nextLine(); // Limpiar buffer
