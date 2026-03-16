@@ -9,7 +9,7 @@ package transcesar.Modelo;
  * @author 2jcue
  */
 
-    public class Bus extends Vehiculo {
+    public class Bus extends vehiculo {
 
     public Bus(String placa, String ruta) {
         super(placa, ruta);

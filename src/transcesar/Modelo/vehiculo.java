@@ -1,7 +1,7 @@
 
 package transcesar.Modelo;
 
-public abstract class Vehiculo {
+public abstract class vehiculo {
     protected String placa;
     protected String ruta;
     protected int capacidadMaxima;
@@ -9,7 +9,7 @@ public abstract class Vehiculo {
     protected boolean disponible;
     protected double tarifaBase;
     
-    public Vehiculo(String placa, String ruta) {
+    public vehiculo(String placa, String ruta) {
         this.placa = placa;
         this.ruta = ruta;
         this.pasajerosActuales = 0;

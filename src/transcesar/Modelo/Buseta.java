@@ -8,7 +8,7 @@ package transcesar.Modelo;
  *
  * @author 2jcue
  */
-public class Buseta extends Vehiculo {
+public class Buseta extends vehiculo {
 
     public Buseta(String placa, String ruta) {
         super(placa, ruta);
