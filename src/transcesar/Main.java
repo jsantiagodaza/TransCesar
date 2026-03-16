@@ -33,6 +33,7 @@ private static Scanner scanner = new Scanner(System.in);
                     System.out.println("Esa opción no existe, eliga una válida.5");
             }
         }while(opcionPrincipal !=4);
+        scanner.close(); //cerramos el scanner 
     }
     
 }
