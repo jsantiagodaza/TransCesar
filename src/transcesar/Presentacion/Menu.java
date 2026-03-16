@@ -22,7 +22,7 @@ public class Menu {
         opcion = Sc.nextInt();
         return (opcion);
     }
-         static int menuPersonas() {
+        public static int menuPersonas() {
         Scanner Sc = new Scanner(System.in);
         int opcionpasajero = 0;
         System.out.println("\n--------------------------------------------------");
@@ -38,7 +38,7 @@ public class Menu {
         opcionpasajero = Sc.nextInt();
         return (opcionpasajero);
     }
-         static int menuVehiculos() {
+        public static int menuVehiculos() {
         Scanner Sc = new Scanner(System.in);
         int opcionvehiculos = 0;
         System.out.println("\n--------------------------------------------------");
@@ -54,7 +54,7 @@ public class Menu {
         opcionvehiculos = Sc.nextInt();
         return (opcionvehiculos);
     }
-         static int menuTickets() {
+        public static int menuTickets() {
         Scanner Sc = new Scanner(System.in);
         int opcionTicket = 0;
         System.out.println("\n--------------------------------------------------");
