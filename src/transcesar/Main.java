@@ -75,4 +75,23 @@ public class Main {
             }
         } while (opcion != 0);
     }
+          public static void menuTickets() {
+        int opcion;
+        do {
+
+            System.out.println("\n|          GESTIÓN DE TICKETS              |");
+            System.out.println("| 1 --> Comprar ticket                                 |");
+            System.out.println("| 2 --> Listar Todas los tickets                   |");
+            System.out.println("| 3 --> Buscar ticket por ID                         |");
+            System.out.println("| 4 --> Eliminar Ticket                                 |");
+            System.out.println("| 0 --> Volver                                               |");
+            System.out.print("| Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar buffer
+
+            switch (opcion) {
+
+            }
+        } while (opcion != 0);
+    }
 }
