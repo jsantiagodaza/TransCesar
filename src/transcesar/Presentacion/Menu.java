@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Menu {
      Scanner Sc = new Scanner(System.in); //<--usaremos scanner para leer variables
    
-     static int menuPrincipal() {
+     public static int menuPrincipal() {
         Scanner Sc = new Scanner(System.in);
         int opcion = 0;
         System.out.println("\n-----------------------------------------------");
