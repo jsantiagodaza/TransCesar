@@ -56,4 +56,23 @@ public class Main {
             }
         } while (opcion != 0);
     }
+      public static void menuVehiculos() {
+        int opcion;
+        do {
+
+            System.out.println("\n|          GESTIÓN DE VEHICULOS        |");
+            System.out.println("| 1 --> Registrar                                          |");
+            System.out.println("| 2 --> Listar Todas los Vehiculos             |");
+            System.out.println("| 3 --> Buscar Vehiculo por placa             |");
+            System.out.println("| 4 --> Eliminar Vehiculo                             |");
+            System.out.println("| 0 --> Volver                                               |");
+            System.out.print("| Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar buffer
+
+            switch (opcion) {
+
+            }
+        } while (opcion != 0);
+    }
 }
