@@ -36,4 +36,23 @@ private static Scanner scanner = new Scanner(System.in);
         scanner.close(); //cerramos el scanner 
     }
     
+       public static void menuPersonas() {
+        int opcion;
+        do {
+          
+            System.out.println("\n|          GESTIÓN DE PERSONAS         |");
+            System.out.println("| 1 --> Registrar                                          |");
+            System.out.println("| 2 --> Listar Todas las personas              |");
+            System.out.println("| 3 --> Buscar Persona por cedula            |");
+            System.out.println("| 4 --> Eliminar Nota               |");
+            System.out.println("| 0 --> Volver                      |");
+            System.out.print("| Seleccione una opción: ");
+            opcion = scanner.nextInt();
+            scanner.nextLine(); // Limpiar buffer
+
+            switch (opcion) {
+             
+            }
+        } while (opcion != 0);
+    }
 }
