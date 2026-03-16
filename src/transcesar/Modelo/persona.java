@@ -3,7 +3,6 @@ package transcesar.Modelo;
 import java.time.LocalDate;
 public class Persona {
 
-public class persona {
     private String id;
     private String nombre;
     private String apellido;
@@ -11,7 +10,7 @@ public class persona {
     private int edad;
     private String direccion;     
 
-    public persona(String id, String nombre, String apellido, String telefono, int edad, String direccion) {
+    public Persona(String id, String nombre, String apellido, String telefono, int edad, String direccion) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -74,4 +73,4 @@ public class persona {
        
 }
     
-}
+
