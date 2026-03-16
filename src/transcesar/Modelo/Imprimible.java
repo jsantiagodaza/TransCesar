@@ -9,5 +9,5 @@ package transcesar.Modelo;
  * @author 2jcue
  */
 public class Imprimible {
-     
+   
 }
