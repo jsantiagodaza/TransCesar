@@ -29,6 +29,8 @@ private static Scanner scanner = new Scanner(System.in);
                 case 4:
                     System.out.println("Nos vemos!, cerrando sistema...");
                     break;
+                default:
+                    System.out.println("Esa opción no existe, eliga una válida.5");
             }
         }while(opcionPrincipal !=4);
     }
