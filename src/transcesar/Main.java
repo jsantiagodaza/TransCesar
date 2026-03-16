@@ -13,10 +13,16 @@ private static Scanner scanner = new Scanner(System.in);
         do{
             
             opcionPrincipal = Menu.menuPrincipal();
-            
-            
-            
-            
+            switch (opcionPrincipal){
+                case 1:
+                    break;
+                case 2:
+                    break;
+                case 3:
+                    break;
+                case 4:
+                    break;
+            }
         }while(opcionPrincipal !=4);
     }
     
