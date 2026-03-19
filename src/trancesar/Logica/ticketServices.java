@@ -1,4 +1,4 @@
-package transcesar.logica;
+package trancesar.Logica;
 
 import transcesar.persistencia.TicketDAO;
 import transcesar.modelo.*;

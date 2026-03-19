@@ -1,5 +1,5 @@
-package transcesar.logica;
-
+package trancesar.Logica;
+ 
 import transcesar.persistencia.ConductorDAO;
 import transcesar.persistencia.PasajeroDAO;
 import transcesar.modelo.*;
