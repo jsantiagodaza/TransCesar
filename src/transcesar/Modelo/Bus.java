@@ -27,7 +27,7 @@ package transcesar.Modelo;
         System.out.println("Pasajeros act.  : " + pasajerosActuales);
         System.out.println("Cupos disponib. : " + getCuposDisponibles());
         System.out.println("Tarifa base     : $" + String.format("%,.0f", tarifaBase));
-        System.out.println("Disponible      : " + (disponible ? "Sí" : "No"));
+        System.out.println("Disponible      : " + (disponible ? "Si" : "No"));
         System.out.println("=========================");
     }
 

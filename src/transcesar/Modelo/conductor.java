@@ -3,31 +3,49 @@ package transcesar.Modelo;
 
 
 
-public class conductor extends persona {
-    private String licencia;
-    
-    public conductor(String id, String nombre, String apellido, String telefono, int edad, String direccion) {
-        super(id, nombre, apellido, telefono, edad, direccion);
-        
-       
-        
-   
+public class Conductor extends Persona {
+    private String numeroLicencia;
+    private String categoriaLicencia;
+
+    public Conductor(String cedula, String nombre, String numeroLicencia, String categoriaLicencia) {
+        super(cedula, nombre);
+        this.numeroLicencia = numeroLicencia;
+        this.categoriaLicencia = categoriaLicencia;
     }
 
-    public String getLicencia() {
-        return licencia;
+    public String getNumeroLicencia() {
+        return numeroLicencia;
     }
 
-    public void setLicencia(String licencia) {
-        this.licencia = licencia;
+    public void setNumeroLicencia(String numeroLicencia) {
+        this.numeroLicencia = numeroLicencia;
     }
 
-    public conductor(String licencia, String id, String nombre, String apellido, String telefono, int edad, String direccion) {
-        super(id, nombre, apellido, telefono, edad, direccion);
-        this.licencia = licencia;
+    public String getCategoriaLicencia() {
+        return categoriaLicencia;
+    }
+
+    public void setCategoriaLicencia(String categoriaLicencia) {
+        this.categoriaLicencia = categoriaLicencia;
     }
  
+     public boolean tieneLicencia() {
+        return numeroLicencia != null && !numeroLicencia.trim().isEmpty();
+    }
     
+      @Override
+    public void imprimirDetalle() {
+        System.out.println("========== CONDUCTOR ==========");
+        System.out.println("Cédula      : " + cedula);
+        System.out.println("Nombre      : " + nombre);
+        System.out.println("N° Licencia : " + (numeroLicencia != null ? numeroLicencia : "Sin licencia"));
+        System.out.println("Categoría   : " + (categoriaLicencia != null ? categoriaLicencia : "N/A"));
+        System.out.println("================================");
+    }
     
-    
+    public String toCSV() {
+        return cedula + ";" + nombre + ";" +
+               (numeroLicencia != null ? numeroLicencia : "") + ";" +
+               (categoriaLicencia != null ? categoriaLicencia : "");
+    }
 }
