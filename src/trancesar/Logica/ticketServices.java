@@ -1,72 +1,60 @@
-package trancesar.Logica;
+package transcesar.logica;
 
-import Modelo.ticketDAO;
-import transcesar.persistencia.ticketDAO;
-import java.time.LocalDate;
-import java.time.LocalTime;
+import transcesar.persistencia.TicketDAO;
+import transcesar.modelo.*;
 import java.util.ArrayList;
-import java.util.UUID;
-
-
+import java.util.List;
 
 public class ticketServices {
-    
-    private TicketDAO ticketDAO = new TicketDAO();
-    
-    
-    
-        // Generar código único para ticket
-        private String generarCodigoTicket(String tipoVehiculo) {
-        String prefijo = "BUS";
-        if (tipoVehiculo != null && tipoVehiculo.toLowerCase().contains("micro")) {
-            prefijo = "MBUS";
-        }
-        // Número aleatorio de 4 dígitos para precio
-        int numero = (int)(Math.random() * 9000) + 1000;
-        return prefijo + "-" + numero;
+
+    private TicketDAO dao;
+    private List<Ticket> tickets;
+    private VehiculoService vehiculoService;
+    private PersonaService personaService;
+
+    public ticketServices(VehiculoService vehiculoService,
+                          PersonaService personaService) {
+        this.dao = new TicketDAO();
+        this.vehiculoService = vehiculoService;
+        this.personaService = personaService;
+        this.tickets = dao.cargarTodos(
+                personaService.getPasajerosCargados(),
+                vehiculoService.listarTodos()
+        );
     }
-         
-        // Registrar ticket
-        public String registrarTicket(String empresa, LocalDate fecha, LocalTime hora, 
-                            String idVehiculo, float precio, String tipoVehiculo) {
-        // Validaciones básicas
-        if (precio <= 0) {
-            return "Error: El precio debe ser mayor a cero";
-        }
-        
-        // Generar ID único y código
-        String id = UUID.randomUUID().toString();
-        String codigoTicket = generarCodigoTicket(tipoVehiculo);
-        
-        // Crear y guardar
-        ticket nuevo = new ticket(id, empresa, codigoTicket, fecha, hora, idVehiculo, precio);
-        ticketDAO.guardar(nuevo);
-        
-        return "Ticket creado con éxito. Código: " + codigoTicket;
+
+    public String venderTicket(String cedulaPasajero, String placaVehiculo,
+                               String origen, String destino) {
+        Pasajero pasajero = personaService.buscarPasajeroPorCedula(cedulaPasajero);
+        if (pasajero == null)
+            return "ERROR: No se encontró pasajero con cedula " + cedulaPasajero;
+
+        Vehiculo vehiculo = vehiculoService.buscarPorPlaca(placaVehiculo);
+        if (vehiculo == null)
+            return "ERROR: No se encontro vehiculo con placa " + placaVehiculo;
+
+        if (!vehiculo.isDisponible())
+            return "ERROR: El vehiculo " + placaVehiculo + " no esta disponible.";
+
+        if (!vehiculo.tieneCupos())
+            return "ERROR: El vehiculo " + placaVehiculo + " está lleno. No hay cupos disponibles.";
+
+        if (origen == null || origen.trim().isEmpty())
+            return "ERROR: El origen no puede estar vacio.";
+
+        if (destino == null || destino.trim().isEmpty())
+            return "ERROR: El destino no puede estar vacio.";
+
+        Ticket t = new Ticket(pasajero, vehiculo, origen, destino);
+        vehiculo.agregarPasajero();
+        tickets.add(t);
+        dao.guardar(t);
+        vehiculoService.guardarCambios();
+
+        return String.format("OK: Ticket #%d generado. Valor: $%,.0f", t.getId(), t.getValorFinal());
     }
-        
-        // Buscar ticket
-        public ticket buscarTicket(String id) {
-        return ticketDAO.buscarPorId(id);
+
+    public List<Ticket> listarTodos() {
+        return new ArrayList<>(tickets);
     }
-        
-        public ticket buscarPorCodigo(String codigo) {
-        return ticketDAO.buscarPorCodigo(codigo);
-    }
-        
-        // Listar todos
-        public ArrayList<ticket> listarTickets() {
-        return ticketDAO.obtenerTodos();
-    }
-        
-        // Calcular precio con descuento (ejemplo)
-        public float calcularPrecioConDescuento(float precioOriginal, float porcentajeDescuento) {
-        return precioOriginal * (1 - porcentajeDescuento/100);
-    }
-   
-    
-    
-    
-    
-    
 }
