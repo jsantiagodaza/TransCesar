@@ -3,28 +3,14 @@ package transcesar.Modelo;
 
 
 
-public class conductor extends persona {
-    private String licencia;
-    
-    public conductor(String id, String nombre, String apellido, String telefono, int edad, String direccion) {
-        super(id, nombre, apellido, telefono, edad, direccion);
-        
-       
-        
-   
-    }
+public class Conductor extends Persona {
+    private String numeroLicencia;
+    private String categoriaLicencia;
 
-    public String getLicencia() {
-        return licencia;
-    }
-
-    public void setLicencia(String licencia) {
-        this.licencia = licencia;
-    }
-
-    public conductor(String licencia, String id, String nombre, String apellido, String telefono, int edad, String direccion) {
-        super(id, nombre, apellido, telefono, edad, direccion);
-        this.licencia = licencia;
+    public Conductor(String cedula, String nombre, String numeroLicencia, String categoriaLicencia) {
+        super(cedula, nombre);
+        this.numeroLicencia = numeroLicencia;
+        this.categoriaLicencia = categoriaLicencia;
     }
  
     
